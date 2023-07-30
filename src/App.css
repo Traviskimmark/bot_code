@@ -1,37 +1,12 @@
-/* App.css */
 
-/* Main container styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-/* Logo image styles */
-img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
-}
-
-/* YourBotArmy container styles */
-.YourBotArmy {
-  margin-top: 30px;
+.app-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding: 20px;
 }
 
-/* Bot card styles */
-.YourBotArmy .bot-card {
+.bot-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +16,9 @@ img {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-}
+  border: 1px solid #faf4f4; }
 
-.YourBotArmy .bot-card img {
+.bot-card img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -51,22 +26,25 @@ img {
   object-fit: cover;
 }
 
-.YourBotArmy .bot-card h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.YourBotArmy .bot-card p {
-  margin: 0;
-  font-size: 14px;
-  color: #777;
+.your-bot-army {
+  margin-top: 30px;
 }
 
-/* Hover effect for bot cards */
-.YourBotArmy .bot-card:hover {
-  transform: translateY(-5px);
+
+.grid-container {
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
-/* Add more styles as needed */
+
+.bot-card:hover {
+  background-color:blue
+}
+
+

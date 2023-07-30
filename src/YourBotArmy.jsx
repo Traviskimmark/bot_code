@@ -1,25 +1,18 @@
-import React from 'react'
 
-function YourBotArmy({data}) {
+import React from 'react';
+import BotCard from './BotCard';
+
+function YourBotArmy({ enlistedBots, handleReleaseBot }) {
   return (
-    <div>
-        {data.map((item)=>{
-return(
-    
-    <div key={item.id}>
-<img src={item.avatar_url} />
-<p>Name: {item.name}</p>
-<p>Damage:{item.damage}</p>
-<p>Armor: {item.armor}</p>
-<p>Bot_class: {item.bot_class}</p>
-
+    <div className="your-bot-army">
+      <h2>Your Bot Army</h2>
+      <div className="grid-container">
+        {enlistedBots.map((bot) => (
+          <BotCard key={bot.id} bot={bot} buttonText="Delete Bot" handleClick={handleReleaseBot} />
+        ))}
+      </div>
     </div>
-)
-
-        })}
-
-    </div>
-  )
+  );
 }
 
-export default YourBotArmy
+export default YourBotArmy;
