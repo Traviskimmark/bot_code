@@ -44,7 +44,7 @@
 
 
 .bot-card:hover {
-  
+  transform: translateY(-5px);
   background-color:blue
 }
 
